@@ -174,13 +174,14 @@ class IntentClassifier:
                 "error": str(e),
             }
         
-        # Cache the result
+        # Cache the result only if it's not a complete failure
         result["cached"] = False
-        _classification_cache[key] = {
-            "intent": result["intent"],
-            "confidence": result["confidence"],
-        }
-        _save_cache()
+        if result["confidence"] > 0.0:
+            _classification_cache[key] = {
+                "intent": result["intent"],
+                "confidence": result["confidence"],
+            }
+            _save_cache()
         
         return result
     

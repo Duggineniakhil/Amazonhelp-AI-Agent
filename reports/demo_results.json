@@ -1,0 +1,430 @@
+[
+  {
+    "customer_message": "Where is my order? I ordered 5 days ago and still haven't received anything!",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_intent_confidence (0.00); high_retrieval_confidence (similarity: 0.80).",
+      "confidence": 1.0,
+      "escalate_score": 0.0,
+      "signals": [
+        "low_intent_confidence (0.00)",
+        "high_retrieval_confidence (similarity: 0.80)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.7976374626159668,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.7976374626159668
+        },
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.29613399505615234
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.09646132588386536
+        }
+      ]
+    },
+    "processing_time_seconds": 5.44
+  },
+  {
+    "customer_message": "I want a full refund. The product was completely different from the listing.",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_intent_confidence (0.00); common_simple_intent (general_inquiry).",
+      "confidence": 0.95,
+      "escalate_score": 0.05,
+      "signals": [
+        "low_intent_confidence (0.00)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.6667280793190002,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.6667280793190002
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.25706708431243896
+        },
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.24424874782562256
+        }
+      ]
+    },
+    "processing_time_seconds": 4.89
+  },
+  {
+    "customer_message": "How do I return this item? It's the wrong size.",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_retrieval_confidence (similarity: 0.42, threshold: 0.45); low_intent_confidence (0.00).",
+      "confidence": 0.75,
+      "escalate_score": 0.25,
+      "signals": [
+        "low_retrieval_confidence (similarity: 0.42, threshold: 0.45)",
+        "low_intent_confidence (0.00)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.41560471057891846,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.41560471057891846
+        },
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.3655203580856323
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.17247526347637177
+        }
+      ]
+    },
+    "processing_time_seconds": 4.6
+  },
+  {
+    "customer_message": "My package says delivered but it's not here. Someone might have stolen it.",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "escalate",
+      "reason": "Escalating because: sensitive_keywords: stolen; low_intent_confidence (0.00); common_simple_intent (general_inquiry).",
+      "confidence": 0.45,
+      "escalate_score": 0.45,
+      "signals": [
+        "sensitive_keywords: stolen",
+        "low_intent_confidence (0.00)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.5278458595275879,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.5278458595275879
+        },
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.251056432723999
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": -0.0053106993436813354
+        }
+      ]
+    },
+    "processing_time_seconds": 4.65
+  },
+  {
+    "customer_message": "I can't log into my account. I've tried resetting my password 3 times.",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_retrieval_confidence (similarity: 0.20, threshold: 0.45); low_intent_confidence (0.00).",
+      "confidence": 0.75,
+      "escalate_score": 0.25,
+      "signals": [
+        "low_retrieval_confidence (similarity: 0.20, threshold: 0.45)",
+        "low_intent_confidence (0.00)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.20438356697559357,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.20438356697559357
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.15500903129577637
+        },
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.10958623886108398
+        }
+      ]
+    },
+    "processing_time_seconds": 4.58
+  },
+  {
+    "customer_message": "I was charged TWICE for one order!!! This is unacceptable!!!",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_retrieval_confidence (similarity: 0.39, threshold: 0.45); low_intent_confidence (0.00).",
+      "confidence": 0.65,
+      "escalate_score": 0.35,
+      "signals": [
+        "low_retrieval_confidence (similarity: 0.39, threshold: 0.45)",
+        "low_intent_confidence (0.00)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.38776469230651855,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.38776469230651855
+        },
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.27150169014930725
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.18953834474086761
+        }
+      ]
+    },
+    "processing_time_seconds": 4.58
+  },
+  {
+    "customer_message": "The laptop I received has a cracked screen. This is ridiculous.",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_retrieval_confidence (similarity: 0.37, threshold: 0.45); low_intent_confidence (0.00).",
+      "confidence": 0.75,
+      "escalate_score": 0.25,
+      "signals": [
+        "low_retrieval_confidence (similarity: 0.37, threshold: 0.45)",
+        "low_intent_confidence (0.00)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.3719293475151062,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.3719293475151062
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.08983033895492554
+        },
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.0719255805015564
+        }
+      ]
+    },
+    "processing_time_seconds": 4.57
+  },
+  {
+    "customer_message": "Cancel my Prime membership immediately.",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_intent_confidence (0.00); high_retrieval_confidence (similarity: 0.77).",
+      "confidence": 1.0,
+      "escalate_score": 0.0,
+      "signals": [
+        "low_intent_confidence (0.00)",
+        "high_retrieval_confidence (similarity: 0.77)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.772727906703949,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.772727906703949
+        },
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.25053688883781433
+        },
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.1637374758720398
+        }
+      ]
+    },
+    "processing_time_seconds": 4.55
+  },
+  {
+    "customer_message": "The seller is selling counterfeit products and won't respond to my complaints.",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_retrieval_confidence (similarity: 0.38, threshold: 0.45); low_intent_confidence (0.00).",
+      "confidence": 0.75,
+      "escalate_score": 0.25,
+      "signals": [
+        "low_retrieval_confidence (similarity: 0.38, threshold: 0.45)",
+        "low_intent_confidence (0.00)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.38196441531181335,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.38196441531181335
+        },
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.28563809394836426
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.08841756731271744
+        }
+      ]
+    },
+    "processing_time_seconds": 4.59
+  },
+  {
+    "customer_message": "What's your return window for electronics?",
+    "intent": {
+      "label": "general_inquiry",
+      "confidence": 0.0,
+      "cached": false
+    },
+    "reply": "Thanks for reaching out! Please DM us with more details and we'll be happy to help.",
+    "reply_metadata": {
+      "model": "fallback",
+      "grounded_in": []
+    },
+    "escalation": {
+      "decision": "auto_handle",
+      "reason": "Auto-handling — low_retrieval_confidence (similarity: 0.32, threshold: 0.45); low_intent_confidence (0.00).",
+      "confidence": 0.75,
+      "escalate_score": 0.25,
+      "signals": [
+        "low_retrieval_confidence (similarity: 0.32, threshold: 0.45)",
+        "low_intent_confidence (0.00)",
+        "common_simple_intent (general_inquiry)"
+      ]
+    },
+    "retrieval": {
+      "top_similarity": 0.3242846429347992,
+      "num_retrieved": 3,
+      "examples": [
+        {
+          "customer": "I want a refund for this broken product.",
+          "similarity": 0.3242846429347992
+        },
+        {
+          "customer": "Where is my order?",
+          "similarity": 0.21550780534744263
+        },
+        {
+          "customer": "How do I cancel Prime?",
+          "similarity": 0.090720534324646
+        }
+      ]
+    },
+    "processing_time_seconds": 4.59
+  }
+]

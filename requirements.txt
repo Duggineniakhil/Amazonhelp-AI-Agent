@@ -21,3 +21,5 @@ requests>=2.31.0
 
 # Kaggle API
 kaggle>=1.6.0
+fastapi
+uvicorn

@@ -43,9 +43,9 @@ KAGGLE_API_TOKEN = os.getenv("KAGGLE_API_TOKEN", "")
 # Model Configuration
 # ──────────────────────────────────────────────
 # Groq LLM models
-LLM_MODEL_PRIMARY = "llama-3.1-70b-versatile"      # For classification & drafting
-LLM_MODEL_FAST = "llama-3.1-8b-instant"             # For batch evaluation / judge
-LLM_MODEL_JUDGE = "llama-3.1-70b-versatile"         # For LLM-as-judge
+LLM_MODEL_PRIMARY = "openai/gpt-oss-120b"          # For classification & drafting
+LLM_MODEL_FAST = "qwen/qwen3.8-27b"                # For batch evaluation / judge
+LLM_MODEL_JUDGE = "openai/gpt-oss-120b"            # For LLM-as-judge
 
 # Embedding model (runs locally via sentence-transformers)
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

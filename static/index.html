@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazonHelp AI Agent Dashboard</title>
+    <!-- Google Fonts: Inter and Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (Placeholder for aesthetic) -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-brands fa-amazon"></i>
+                <h2>AmazonHelp <span>AI</span></h2>
+            </div>
+            <nav>
+                <a href="#" class="active"><i class="fa-solid fa-message"></i> Live Simulator</a>
+                <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <div class="agent-status">
+                <div class="status-indicator online"></div>
+                <p>Agent Online</p>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-section">
+            <header class="chat-header">
+                <h3>Customer Interaction Simulator</h3>
+                <p>Test the AI agent against real-world scenarios</p>
+            </header>
+            
+            <div class="chat-window" id="chatWindow">
+                <!-- Welcome Message -->
+                <div class="message system">
+                    <div class="message-content">
+                        <i class="fa-solid fa-robot"></i>
+                        <p>Welcome to the AmazonHelp AI evaluation dashboard. Enter a customer query below to see how the agent handles routing, intent classification, and replies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <form id="chatForm">
+                    <input type="text" id="userInput" placeholder="Type a customer message here (e.g. 'Where is my order?')" autocomplete="off" required>
+                    <button type="submit" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Analytics / Diagnostics Panel -->
+        <aside class="diagnostics-panel">
+            <header>
+                <h3><i class="fa-solid fa-microchip"></i> Agent Diagnostics</h3>
+            </header>
+            
+            <div class="diagnostic-card" id="intentCard">
+                <h4>Intent Classification</h4>
+                <div class="metric">
+                    <span class="label">Detected Intent:</span>
+                    <span class="value badge" id="intentLabel">Waiting...</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Confidence:</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="intentConfidenceBar" style="width: 0%"></div>
+                    </div>
+                    <span class="value-small" id="intentConfidenceText">0%</span>
+                </div>
+            </div>
+
+            <div class="diagnostic-card" id="escalationCard">
+                <h4>Escalation Engine</h4>
+                <div class="metric">
+                    <span class="label">Decision:</span>
+                    <span class="value badge neutral" id="escalationDecision">Waiting...</span>
+                </div>
+                <p class="reasoning" id="escalationReason">No message processed yet.</p>
+            </div>
+
+            <div class="diagnostic-card" id="retrievalCard">
+                <h4>Retrieval (RAG)</h4>
+                <div class="metric">
+                    <span class="label">Top Match Similarity:</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="retrievalConfidenceBar" style="width: 0%"></div>
+                    </div>
+                    <span class="value-small" id="retrievalConfidenceText">0%</span>
+                </div>
+                <div class="retrieved-example" id="retrievedExample">
+                    <p class="context-hint">Historical context will appear here.</p>
+                </div>
+            </div>
+            
+            <div class="performance-metric">
+                <i class="fa-regular fa-clock"></i>
+                <span>Processing Time: <strong id="processingTime">0.00s</strong></span>
+            </div>
+        </aside>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
