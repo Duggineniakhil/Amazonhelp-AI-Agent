@@ -1,0 +1,39 @@
+# Data files (large, downloaded from Kaggle)
+data/
+*.csv
+
+# Environment
+.env
+kaggle.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# FAISS index (rebuild with build_index.py)
+*.faiss
+*.index
+index/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Cache
+.cache/
+cache/
+*.pkl
