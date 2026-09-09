@@ -4,31 +4,40 @@ data/
 
 # Environment
 .env
-kaggle.json
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 *.egg-info/
 dist/
 build/
 *.egg
 
-# FAISS index (rebuild with build_index.py)
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+kaggle.json
+
+# Data and Indexes
+index/
 *.faiss
 *.index
-index/
 
-# IDE
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# OS
-.DS_Store
-Thumbs.db
 
 # Notebooks checkpoints
 .ipynb_checkpoints/

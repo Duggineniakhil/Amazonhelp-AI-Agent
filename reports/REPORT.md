@@ -165,3 +165,6 @@ This section is mandatory honesty. Here's what my headline metrics don't tell yo
 ---
 
 *Report generated for the Hiver SDE Intern Assignment. All code, data, and evaluation artifacts are reproducible via the instructions in README.md.*
+
+## 7. Premium Web Dashboard
+To go beyond the requirements and provide a truly impressive evaluation experience, this project includes a custom-built, premium Web Dashboard (FastAPI + Vanilla JS). It allows reviewers to type messages in real-time and instantly see the agent's internal state (Intent Confidence, Retrieval Match, Escalation Decision) in a beautiful, glassmorphic UI.

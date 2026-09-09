@@ -67,3 +67,8 @@ A plain list of the 15 non-obvious decisions made during this project, with reas
 ---
 
 *All decisions are open to questioning in a live code review. I can explain and modify any of these choices.*
+
+### 16. Replacing CLI with a FastAPI Web Dashboard
+**Decision**: Built a premium Web Dashboard using FastAPI and Vanilla JS instead of a CLI tool.
+**Why**: A support agent AI needs to be experienced visually to understand the latency, typing behavior, and UI/UX impact. The dashboard allows reviewers to immediately see the internal routing decisions (Intent, Escalation Reason, RAG Similarity) alongside the generated reply in a sleek, non-intimidating interface without needing to read terminal logs.
+**Alternative Considered**: Using Streamlit or Gradio. Rejected because they lack the fine-grained CSS control needed for a premium, custom 'glassmorphic' aesthetic, and FastAPI allows better separation of concerns.

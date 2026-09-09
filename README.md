@@ -92,26 +92,25 @@ python scripts/build_index.py
 
 This embeds all customer messages and builds a FAISS index for similarity search.
 
-### Step 5: Run the Agent (~2 min)
+## 🚀 Running the Web Dashboard
+
+We have built a premium, responsive web dashboard using **FastAPI** to interact with the AI agent.
 
 ```bash
-# Demo mode — processes 10 sample messages
-python -m src.agent --demo
-
-# Interactive mode — chat with the agent
-python -m src.agent --interactive
-
-# Single message
-python -m src.agent --message "Where is my order?"
+# Start the backend server
+uvicorn src.api:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Step 6: Run Evaluation (~8 min)
+1. Open your browser and navigate to `http://localhost:8000`.
+2. Use the **Live Simulator** to type customer messages (e.g., *"Where is my order?"*).
+3. Watch the **Agent Diagnostics** panel update in real-time with intent probabilities, retrieval similarity scores, and escalation decisions.
+
+## 🧪 Evaluation Harness
+
+To run the full evaluation harness (which tests against the golden set and generates `evaluation_results.json`):
 
 ```bash
-# First, create the golden evaluation set
-python -m evaluation.golden_set
-
-# Run full evaluation (agent + baselines + LLM judge)
+# Run full evaluation
 python -m evaluation.run_evaluation
 
 # Faster: skip LLM judge
